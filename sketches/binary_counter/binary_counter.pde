@@ -51,12 +51,12 @@ void draw() {
   text(a[1],409,764);
   text(a[2],477,764);
   
-  color red = color(255,0,0,200);
-  color green = color(0,255,0,200);
+  color c1 = color(255,0);
+  color c2 = color(30,100,200,200);
   int r = 60;
   int r2 = 20;
   noStroke();
-  if (AND1) {fill(green);} else {fill(red);}
+  if (AND1) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(74,192);
     vertex(74,228);
@@ -76,7 +76,7 @@ void draw() {
     vertex(73,191);
     endShape();
  //AND1
-  if (XOR1) {fill(green);} else {fill(red);}
+  if (XOR1) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(267,185);
     vertex(266,207);
@@ -109,7 +109,7 @@ void draw() {
     vertex(265,184);
     endShape();
  //XOR1
-  if (AND3) {fill(green);} else {fill(red);}
+  if (AND3) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(529,192);
     vertex(528,219);
@@ -130,7 +130,7 @@ void draw() {
     vertex(529,192);
     endShape();
  // AND3
-  if (XOR3) {fill(green);} else {fill(red);}
+  if (XOR3) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(663,186);
     vertex(663,202);
@@ -167,7 +167,7 @@ void draw() {
     vertex(664,185);
     endShape();
  // XOR3
-  if (AND2) {fill(green);} else {fill(red);}
+  if (AND2) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(149,345);
     vertex(149,379);
@@ -186,7 +186,7 @@ void draw() {
     vertex(150,345);
     endShape();
  //AND2
-  if (XOR2) {fill(green);} else {fill(red);}
+  if (XOR2) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(284,347);
     vertex(283,361);
@@ -213,7 +213,7 @@ void draw() {
     vertex(284,346);
     endShape();
  //XOR2
-  if (OR) {fill(green);} else {fill(red);}
+  if (OR) {fill(c2);} else {fill(c1);}
     beginShape();
     vertex(90,526);
     vertex(90,544);
@@ -237,14 +237,23 @@ void draw() {
     vertex(93,528);
     vertex(90,525);
     endShape();
- //OR
+  //OR
   
-  if (OR) {fill(green);} else {fill(red);}
+  if (OR) {fill(c2);} else {fill(c1);}
   ellipse(343,721,r2,r2);
-  if (XOR2) {fill(green);} else {fill(red);}
+  if (XOR2) {fill(c2);} else {fill(c1);}
   ellipse(410,721,r2,r2);
-  if (XOR3) {fill(green);} else {fill(red);}
+  if (XOR3) {fill(c2);} else {fill(c1);}
   ellipse(477,721,r2,r2);
+  
+  if (input[0] == 1) {fill(c2);} else {fill(c1);}
+  ellipse(275,76,10,10);
+  if (input[1] == 1) {fill(c2);} else {fill(c1);}
+  ellipse(351,76,10,10);
+  if (input[2] == 1) {fill(c2);} else {fill(c1);}
+  ellipse(495,76,10,10);
+  if (input[3] == 1) {fill(c2);} else {fill(c1);}
+  ellipse(570,76,10,10);
 }
 void mousePressed() {
   if (mouseButton == LEFT) {
